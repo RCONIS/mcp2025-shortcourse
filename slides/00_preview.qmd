@@ -1,0 +1,177 @@
+---
+title: "0 Preview"
+description: "Preview of the short course"
+image: thumbnails/hello.jpg
+author: Daniel Sabanés Bové and Jack Talboys
+---
+
+## Disclaimer
+
+*Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.*
+
+## Today
+
+What are we going to do today?
+
+Give you a preview of the course *"Good Software Engineering Practice for R Packages"* at the [SnB 2025 conference](https://snb2025.sciencesconf.org/) in Paris, France!
+
+But no worries if you can't make it to the conference, we will share all materials online ...
+
+Plus you will learn some awesome things right here, today!
+
+## Where are we from? `openstatsware`
+
+::: columns
+::: {.column width="70%"}
+- [openstatsware.org](https://openstatsware.org)
+- Since: 19 August 2022 - already 3 years now!
+- Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)
+- Who: Currently more than 60 statisticians from more than 30 organizations
+- What: Engineer packages and spread best practices
+:::
+
+::: {.column width="30%"}
+![](https://raw.githubusercontent.com/RConsortium/asa-biop-swe-wg/main/sticker/openstatsware-hex.svg){height="300"}
+:::
+:::
+
+## Daniel
+
+::: columns
+::: {.column width="30%"}
+![](resources/daniel.jpg)
+:::
+
+::: {.column width="70%"}
+-   Ph.D. in Statistics from University of Zurich, Bayesian Model Selection
+-   Biostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for the last 4 years
+-   Co-founder of [RCONIS](https://rconis.com)
+-   Multiple R packages on CRAN and Bioconductor, co-wrote book on Likelihood and Bayesian Inference, chair of `openstatsware`
+-   Feel free to connect
+    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
+    [`r fontawesome::fa("github")`](https://github.com/danielinteractive)
+    [`r fontawesome::fa("globe")`](https://rconis.com)
+:::
+:::
+
+## Jack
+
+::: columns
+::: {.column width="70%"}
+-   TODO: add bio
+:::
+
+::: {.column width="30%"}
+![](resources/jack.jpg)
+:::
+:::
+
+## What you will learn in the short course
+
+-   Understand the basic structure of an R package
+-   Create your own R `r fontawesome::fa("cube")`
+-   Learn about & apply professional `r fontawesome::fa("cube")` development workflow
+-   Learn & apply fundamentals of quality control for R `r fontawesome::fa("cube")`
+-   Learn how to make an R `r fontawesome::fa("cube")` available to others
+
+## What do we mean by GSWEP4R\*?
+
+::: aside
+\* Good Software Engineering Practice for R
+:::
+
+-   Applying concept of "Good XYZ Practice" to SWE with R
+-   Improve **quality** and **longevity** of R code/packages  
+-   Not a universal standard; we share our perspectives
+-   Collection of best practices
+-   Do not reinvent the wheel: learn from the community
+
+## Why care about GSWEP4R?
+
+-   R is one of the most successfull statistical programming languages
+-   R is a powerful yet complex *ecosystem*
+    -   Core component: R packages
+    -   Mature analysts: users & contributors
+    -   Deep understanding crucial, even to just assess quality
+-   Analyses increasingly require complex scripts/programs
+-   The concepts are applicable to other languages, too (Python, Julia, etc.)
+
+## Start small - from script to package
+
+1.  Encapsulate behavior (functions)
+2.  Avoid global state/variables
+3.  Adopt consistent coding style
+4.  Document well
+5.  Add test cases
+6.  Refactor and optimize code
+7.  Version your code
+8.  Share as 'bundle'
+
+$\leadsto$ R package
+
+## Before and after the course
+
+What difference will the course make?
+
+::: columns
+::: {.column width="50%"}
+### Before
+
+- Unstructured scripts
+- Hard to reproduce results
+- Difficult to share or reuse code
+- No automated tests
+- Inconsistent style and documentation
+- Challenging to maintain or extend
+:::
+
+::: {.column width="50%"}
+### After
+
+- Organized R packages
+- Reproducible workflows
+- Easy to share and collaborate
+- Automated testing and quality checks
+- Consistent style and clear documentation
+- Easier maintenance and future development
+:::
+:::
+
+## The conference 
+
+TODO
+
+## How to register for the short course?
+
+TODO
+
+
+
+# Question, Comments?
+
+# License information
+
+- Creators (initial authors): 
+  Daniel Sabanes Bove 
+  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) 
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
+  Friedrich Pahlke [`r fontawesome::fa("github")`](https://github.com/fpahlke/) 
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/pahlke/),
+  Kevin Kunzmann 
+  [`r fontawesome::fa("github")`](https://github.com/kkmann/) 
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/kevin-kunzmann-6486a11bb/),
+  Andrew Bean
+  [`r fontawesome::fa("github")`](https://github.com/andrew-bean)
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/andrew-bean-83539116/),
+  Doug Kelkhoff
+  [`r fontawesome::fa("github")`](https://github.com/dgkf)
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/doug-kelkhoff/),
+  Philippe Boileau
+  [`r fontawesome::fa("github")`](https://github.com/philboileau)
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/philippe-boileau-773270205/)
+  [`r fontawesome::fa("globe")`](https://pboileau.ca/)
+- In the current version, changes were done by (later authors): 
+  Jack Talboys 
+  [`r fontawesome::fa("github")`](https://github.com/jtalboys/)
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/jack-talboys-44b854169/)
+{{< include _license_footer.qmd >}}

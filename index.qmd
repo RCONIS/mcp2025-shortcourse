@@ -1,9 +1,9 @@
 ---
 title: "Good Software Engineering Practice for R Packages"
-description: 'useR! 2024 Tutorial'
-author: Daniel Sabanés Bové and Friedrich Pahlke
+description: 'SnB 2025 Short Course'
+author: Daniel Sabanés Bové and Jack Talboys
 institute: '[![RCONIS](slides/resources/RCONIS_100.png)](https://www.rconis.com "RPACT Company Website")'
-creator: Daniel Sabanés Bové and Friedrich Pahlke
+creator: Daniel Sabanés Bové and Jack Talboys
 keywords: "rconis, gswep, r, gxp"
 email-obfuscation: javascript
 title-meta: 'rconis'
@@ -25,7 +25,7 @@ Creators (initial authors):
 
 The current version was edited by
 - Daniel Sabanes Bove, https://github.com/danielinteractive/ and www.linkedin.com/in/danielsabanesbove/
-- Friedrich Pahlke, https://github.com/fpahlke/ and www.linkedin.com/in/pahlke/
+- Jack Talboys, https://github.com/jtalboys/ and www.linkedin.com/in/jack-talboys-44b854169/
 
 License: This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
@@ -35,32 +35,32 @@ Important: To use this work you must provide the name of the creators (initial a
 -->
 ```
 
-Welcome to the homepage of the tutorial *"Good Software Engineering Practice for R Packages"*, part of the [useR! Conference 2024](https://events.linuxfoundation.org/user/) in Salzburg, Austria. In this course you will learn hands-on skills and tools to engineer reliable R packages. The workshop will be conducted in about 3 hours and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
+Welcome to the homepage of the tutorial *"Good Software Engineering Practice for R Packages"*, part of the [SnB 2025 conference](https://snb2025.sciencesconf.org/) in Paris, France. In this course you will learn hands-on skills and tools to engineer reliable R packages. The workshop will be conducted in 3 hours and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
 
 ## Event Details
 
-This live event will be held on Monday July 8, 2024 14:00 - 17:30 CEST as an in-person tutorial in the room [Tennegau](https://userconf2024.sched.com/venue/Tennegau?iframe=no).
+This live event will be held on Friday October 10, 2025 14:00 - 17:00 CEST as an in-person tutorial in the Salon de l'Aveyron auditorium, located in Paris Bercy.
 
 ## Description
 
-Join us for an engaging 3-hour face-to-face course designed to enhance your R programming skills with a focus on developing reliable R packages used in statistics or data science. This course is a blend of informative presentations and interactive team exercises, aimed at equipping participants with practical tools and techniques for engineering high-quality R packages. Throughout the session, you will collaborate to build a small R package that adheres to clean code rules and incorporates good software engineering practices.
+Join us for an engaging half-day face-to-face short-course designed to enhance your R programming skills with a focus on developing reliable R packages used in statistics or data science. This course is a blend of informative presentations and hands-on coding parts, aimed at equipping participants with practical tools and techniques for engineering high-quality R packages. 
 
-This course is tailored for individuals who are comfortable with writing functions in R and are looking to elevate their package development skills. Bring your laptop and be prepared to transform your approach to R package development through hands-on learning and collaboration. Whether you're looking to improve your workflow, meet regulatory standards, or simply enhance the quality of your statistical tools, this course offers valuable insights and skills to achieve your goals.
+This course is tailored for individuals who are already comfortable with writing functions in R and are looking to elevate their package development skills. Bring your laptop and be prepared to transform your approach to R package development through hands-on learning and collaboration. Whether you're looking to improve your workflow, meet regulatory standards, or simply enhance the quality of your statistical tools, this course offers valuable insights and skills to achieve your goals.
 
 ## Learning Outcomes
 
-Learn, understand, and practice good software engineering rules. Participants will delve into the significance of good engineering habits to avoid the pitfalls of maintenance overload, inefficient development, and regulatory non-compliance. By emphasizing best practices, the course will guide them towards faster releases on CRAN, saving valuable time on refactoring for PoC to release version transitions, and fostering an open environment for community contributions on GitHub. All course materials, including R scripts, will be shared with participants via GitHub, providing easy access to resources for continued learning and application beyond the course.
+Learn, understand, and practice good software engineering rules. Participants will delve into the significance of good engineering habits to avoid the pitfalls of maintenance overload, inefficient development, and regulatory non-compliance. By emphasizing best practices, the course will guide them towards faster releases on CRAN, thus saving valuable time on refactoring for PoC to release version transitions. All course materials, including R scripts, will be shared with participants via GitHub, providing easy access to resources for continued learning and application beyond the course.
 
 ## Schedule 
 
 | Time               | Topic                                        |
 |--------------------|:---------------------------------------------|
-| 14:00 - 14:30 CEST | Introduction and outline                     |
-| 14:30 - 15:15 CEST | R packages, what are they? + practical       |
-| 15:15 - 15:45 CEST | Workflow for creating R packages + practical |
-| 15:45 - 16:30 CEST | R Package quality + exercise                 |
-| 16:30 - 17:15 CEST | Publication of R packages + practical        |
-| 17:15 - 17:30 CEST | Conclusion                                   |
+| 14:00 - 14:15 CEST | Introduction and outline                     |
+| 14:15 - 15:00 CEST | R packages, what are they? + practical       |
+| 15:00 - 15:30 CEST | Workflow for creating R packages             |
+| 15:30 - 16:15 CEST | R Package quality + exercise                 |
+| 16:15 - 16:45 CEST | Publication of R packages                    |
+| 16:45 - 17:00 CEST | Conclusion                                   |
 
 ## Prerequisites & Technical Setup
 
@@ -87,3 +87,8 @@ For the course, participants are required to use their own laptop to be able to 
 -   [26th September 2023, Rockville, MD, US](https://openpharma.github.io/workshop-r-swe-md/)
 -   [16th and 17th October 2023, Montreal, QC, CA](https://openpharma.github.io/workshop-r-swe-mtl/)
 -   [18th and 19th April 2024, Zurich, CH](https://rconis.github.io/workshop-r-swe-zrh/)
+-   [1st August 2024, Beijing, CN](https://kkmann.github.io/workshop-r-swe/)
+-   [28th October 2024, APAC, online](https://openpharma.github.io/workshop-r-swe-rinpharma-2024/)
+-   [8th April 2025, Tokyo, Japan](https://www.linkedin.com/posts/yuichi-nakajima-8984759a_r-package-development-workshop-by-daniel-activity-7305102975851511810-QPl_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAeLiYUB2lCTxf2k2-ROB6XktxT7lyQYIaQ)
+-   [12th August 2025, Philadelphia, PA, US](https://isbiostat.org/short-courses/#CS3)
+-   [24th August 2025, Basel, CH](https://openstatsware.github.io/shortcourse-iscb2025/)
