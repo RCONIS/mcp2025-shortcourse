@@ -16,6 +16,4 @@ Daniel Sabanés Bové studied statistics at LMU Munich, Germany and obtained his
 
 ### Jack Talboys
 
-Consultant and CEO at RPACT
-
 Jack Talboys is a software developer at Novartis. He graduated from the University of Bath with a BSc in Statistics in 2020. Since then, he spent 4 years working as a Data Scientist for a data consultancy, building R and python-based tools to help companies in a wide range of industries. In April of 2024 he joined the Open-source enablement team within Novartis as a Software Developer. In this role he has worked closely with study teams to help implement improved coding practices, as well as producing R packages and shiny applications to help study teams do their best work as efficiently as possible. He is interested in helping study teams utilise Open-source and contributing back to Open-source himself.
