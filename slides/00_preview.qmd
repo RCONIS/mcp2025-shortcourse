@@ -58,7 +58,11 @@ Plus you will learn some awesome things right here, today!
 
 ::: columns
 ::: {.column width="70%"}
--   TODO: add bio
+-   BSc in Statistics from the University of Bath
+-   Data Scientist with Mango Solutions/Ascent, a Data consultancy, for 5 years
+-   Joined Novartis as a Software Developer in April 2024, part of the Open-source enablment team.
+-   Day-to-day is helping study teams to use Open-source, through direct support or building tools!
+    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/jack-talboys-44b854169/)
 :::
 
 ::: {.column width="30%"}
