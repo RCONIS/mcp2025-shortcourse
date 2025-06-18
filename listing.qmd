@@ -3,6 +3,4 @@ title: "Slides"
 listing:
   contents: "slides"
   sort: "title"
-  include:
-    author: "Jack Talboys"
 ---
