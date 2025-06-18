@@ -45,7 +45,7 @@ Plus you will learn some awesome things right here, today!
 ::: {.column width="70%"}
 -   Ph.D. in Statistics from University of Zurich, Bayesian Model Selection
 -   Biostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for the last 4 years
--   Co-founder of [RCONIS](https://rconis.com)
+-   Co-founder of [RCONIS](https://rconis.com) mid 2024 - it has already been 1 year now!
 -   Multiple R packages on CRAN and Bioconductor, co-wrote book on Likelihood and Bayesian Inference, chair of `openstatsware`
 -   Feel free to connect
     [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
@@ -109,9 +109,57 @@ Plus you will learn some awesome things right here, today!
 5.  Add test cases
 6.  Refactor and optimize code
 7.  Version your code
-8.  Share as 'bundle'
+8.  Share as an R package
 
-$\leadsto$ R package
+## Structure of an R package
+
+-  The source of an R package is a directory with a specific structure:
+   - `DESCRIPTION` file with metadata
+   - `NAMESPACE` file to define API 
+   - `R/` directory with R scripts - the "meat" of the package!
+   - `man/` directory with documentation
+   - `tests/` directory with test scripts (optional but important!)
+   - other optional directories (`data/`, `vignettes/`, `inst/`, etc.)
+-  The package can be built into a single file (tarball) for CRAN submission, email etc.
+
+## How to start creating an R package?
+
+-  Use the `usethis` package to create a new package
+   -  `usethis::create_package("path/to/package")`
+-  Use RStudio to create a new package project
+   -  File > New Project > New Directory > R Package
+-  Creates the required directory structure and files for you!
+
+## Which steps should I make?
+
+-  Recommend to start with a "design doc"
+   - What is the purpose of the package? (objectives)
+   - What is the user interface? (conceptual design)
+   - What are the main functions? (prototype code)
+-  Align with your team and stakeholders
+-  Then start with the actual package implementation
+   - Build up function by function
+   - Always include documentation and tests for each function
+
+## How can I ensure a high quality of my R package?
+
+- Use a consistent coding style
+   - e.g. `snake_case` *or* `camelCase` for function names
+- Use a consistent format
+   -  Use [`air`](https://posit-dev.github.io/air/) to automatically format
+- Use `lintr` package to check for common issues
+- Test all of your functions, typically with the `testthat` package
+- Include user facing long form documentation (vignettes) to explain how to use the package   
+- Follow the [openstatsguide](https://www.openstatsware.org/guide.html) checklist
+
+## How to publish my R package?
+
+- Start with a GitHub repository
+- Add a `pkgdown` website to showcase the package
+- Use `devtools::check()` to check the package for common issues
+- Use `rhub::check()` to check the package on different platforms
+- Once ready, submit to CRAN (make sure to read the [CRAN policies](https://cran.r-project.org/web/packages/policies.html))
+- In addition or alternatively, create your [R Universe](https://docs.r-universe.dev/publish/set-up.html) to host the package
 
 ## Before and after the course
 
@@ -143,13 +191,23 @@ What difference will the course make?
 
 ## The conference 
 
-TODO
+-  10th Statistics \& Biopharmacy Conference ([SnB 2025](https://snb2025.sciencesconf.org/))
+-  8 to 10 October 2025, Paris, France
+   -  Venue is "Les salons de l'Aveyron"
+-  Invited speakers give keynote presentations, see the [list](https://snb2025.sciencesconf.org/resource/page/id/9)
+-  Contributed talks and posters, see the [program](https://snb2025.sciencesconf.org/program?lang=en)
+-  Poster and wine session
+-  Conference dinner  
+
+<!-- October is the best month in Paris for spotting gorgeous foliage throughout the city and feels quintessentially Parisian with all of the locals showing out in their best fall fashion. The evenings are cooler, so pack a sweater and coat and expect substantially less crowds than other times of year. -->
 
 ## How to register for the short course?
 
-TODO
-
-
+-  Register for the conference and/or this short course [here](https://snb2025.sciencesconf.org/registration)
+-  Short course fee is 150 EUR (early bird until 15 July 2025, later 200 EUR)
+-  You get a discount if you book two short courses! (2 for 250 EUR)
+   - The second course is "Applied Modelling in Drug Development - Flexible regression modelling in Stan via brms" by Sebastian Weber and Lukas Widmer (Novartis) on 8 October 2025, also highly recommended!
+-  Limited number of places available, so register early!
 
 # Question, Comments?
 
