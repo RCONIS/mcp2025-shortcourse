@@ -3,10 +3,10 @@ project:
   output-dir: docs
 
 website:
-  title: "GSWEP4R Tutorial"
-  description: "useR! Tutorial: Good Software Engineering Practice with R"
+  title: "GSWEP4R Short Course"
+  description: "SnB Short Course: Good Software Engineering Practice with R"
   favicon: favicon.ico
-  site-url: https://RCONIS.github.io/user2024-tutorial-gswep
+  site-url: https://rconis.github.io/SnB2025-shortcourse
   search: true
   navbar:
     left:
