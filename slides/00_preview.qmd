@@ -189,6 +189,8 @@ What difference will the course make?
 :::
 :::
 
+## {background-image="resources/snb.png" background-size="cover"}
+
 ## The conference 
 
 -  10th Statistics \& Biopharmacy Conference ([SnB 2025](https://snb2025.sciencesconf.org/))
