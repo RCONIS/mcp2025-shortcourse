@@ -5,6 +5,11 @@ image: thumbnails/hello.jpg
 author: Daniel Sabanés Bové and Jack Talboys
 ---
 
+```{r, echo = FALSE, results = 'hide'}
+# Workaround for the following Quarto issue (do not remove):
+# Quarto will not render embedded R code unless at least one R code chunk exists
+```
+
 ## Disclaimer
 
 *Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.*
@@ -48,9 +53,9 @@ Plus you will learn some awesome things right here, today!
 -   Co-founder of [RCONIS](https://rconis.com) mid 2024 - it has already been 1 year now!
 -   Multiple R packages on CRAN and Bioconductor, co-wrote book on Likelihood and Bayesian Inference, chair of `openstatsware`
 -   Feel free to connect
-    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
-    [`r fontawesome::fa("github")`](https://github.com/danielinteractive)
-    [`r fontawesome::fa("globe")`](https://rconis.com)
+   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
+   [`r fontawesome::fa("github")`](https://github.com/danielinteractive)
+   [`r fontawesome::fa("globe")`](https://rconis.com)
 :::
 :::
 

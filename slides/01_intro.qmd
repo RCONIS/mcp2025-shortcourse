@@ -143,52 +143,52 @@ $\leadsto$ R package
 
 ```{r cran-pkg-network, echo=FALSE}
 if (!file.exists("resources/pkg_graph.png")) { # primitive caching
-  library(tidyverse)
-  local({
-    r <- getOption("repos")
-    r["CRAN"] <- "https://cloud.r-project.org"
-    options(repos = r)
-  })
-  # get pkg cumulative downloads from last month
-  db <- tools::CRAN_package_db()
-  tbl_dl_ <- db %>%
-      group_by(chunk = row_number() %/% 100) %>% # chunk to comply with API limit
-      nest() %>%
-      mutate(
-          res = purrr::map2(
-              data, chunk,
-              function(data, id) {
-                  cranlogs::cran_downloads(data$Package, when = "last-month") %>%
-                      group_by(package) %>%
-                      summarize(count = sum(count))
-              }
-          )
-      ) %>%
-      ungroup() %>%
-      select(res) %>%
-      unnest(res) %>%
-      distinct()
-  tbl_dl <- filter(tbl_dl_, count >= 10000L, !is.na(count))
-  tbl_deps <- tools::package_dependencies(
+    library(tidyverse)
+    local({
+        r <- getOption("repos")
+        r["CRAN"] <- "https://cloud.r-project.org"
+        options(repos = r)
+    })
+    # get pkg cumulative downloads from last month
+    db <- tools::CRAN_package_db()
+    tbl_dl_ <- db %>%
+        group_by(chunk = row_number() %/% 100) %>% # chunk to comply with API limit
+        nest() %>%
+        mutate(
+            res = purrr::map2(
+                data, chunk,
+                function(data, id) {
+                    cranlogs::cran_downloads(data$Package, when = "last-month") %>%
+                        group_by(package) %>%
+                        summarize(count = sum(count))
+                }
+            )
+        ) %>%
+        ungroup() %>%
+        select(res) %>%
+        unnest(res) %>%
+        distinct()
+    tbl_dl <- filter(tbl_dl_, count >= 10000L, !is.na(count))
+    tbl_deps <- tools::package_dependencies(
         tbl_dl$package,
         which = c("Imports", "Depends", "LinkingTo")
-      ) %>%
-      enframe(name = "from", value = "to") %>%
-      unnest(to)
-  grph_deps <- tidygraph::as_tbl_graph(tbl_deps) %>%
-    left_join(
-      tbl_dl_,
-      by = c(name = "package")
     ) %>%
-    filter(!is.na(count)) # remove base packages
-  plt <- ggraph::ggraph(grph_deps, layout = "linear", circular = TRUE) +
-      ggraph::geom_edge_link(alpha = .033) +
-      ggraph::geom_node_label(
-          aes(label = if_else(count > quantile(count, 0.975, na.rm = TRUE), name, NA_character_)),
-          repel = TRUE
-      ) +
-      ggraph::theme_graph()
-  ggsave("resources/pkg_graph.png", plot = plt, width = 8, height = 8/1.61, dpi = 300)
+        enframe(name = "from", value = "to") %>%
+        unnest(to)
+    grph_deps <- tidygraph::as_tbl_graph(tbl_deps) %>%
+        left_join(
+            tbl_dl_,
+            by = c(name = "package")
+        ) %>%
+        filter(!is.na(count)) # remove base packages
+    plt <- ggraph::ggraph(grph_deps, layout = "linear", circular = TRUE) +
+        ggraph::geom_edge_link(alpha = .033) +
+        ggraph::geom_node_label(
+            aes(label = if_else(count > quantile(count, 0.975, na.rm = TRUE), name, NA_character_)),
+            repel = TRUE
+        ) +
+        ggraph::theme_graph()
+    ggsave("resources/pkg_graph.png", plot = plt, width = 8, height = 8 / 1.61, dpi = 300)
 }
 knitr::include_graphics("resources/pkg_graph.png")
 ```
