@@ -3,16 +3,19 @@ title: "0 Preview"
 description: "Preview of the short course"
 image: thumbnails/hello.jpg
 author: Daniel Sabanés Bové and Jack Talboys
+date: "2025-07-01"
 ---
+
+## Disclaimer
+
+<!-- Daniel to start -->
+
+*Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.*
 
 ```{r, echo = FALSE, results = 'hide'}
 # Workaround for the following Quarto issue (do not remove):
 # Quarto will not render embedded R code unless at least one R code chunk exists
 ```
-
-## Disclaimer
-
-*Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.*
 
 ## Today
 
@@ -23,6 +26,9 @@ Give you a preview of the course *"Good Software Engineering Practice for R Pack
 But no worries if you can't make it to the conference, we will share all materials online ...
 
 Plus you will learn some awesome things right here, today!
+
+<!-- Poll here -->
+
 
 ## Where are we from? `openstatsware`
 
@@ -59,6 +65,8 @@ Plus you will learn some awesome things right here, today!
 :::
 :::
 
+<!-- Jack continues -->
+
 ## Jack
 
 ::: columns
@@ -74,14 +82,6 @@ Plus you will learn some awesome things right here, today!
 ![](resources/jack.jpg)
 :::
 :::
-
-## What you will learn in the short course
-
--   Understand the basic structure of an R package
--   Create your own R `r fontawesome::fa("cube")`
--   Learn about & apply professional `r fontawesome::fa("cube")` development workflow
--   Learn & apply fundamentals of quality control for R `r fontawesome::fa("cube")`
--   Learn how to make an R `r fontawesome::fa("cube")` available to others
 
 ## What do we mean by GSWEP4R\*?
 
@@ -105,6 +105,17 @@ Plus you will learn some awesome things right here, today!
 -   Analyses increasingly require complex scripts/programs
 -   The concepts are applicable to other languages, too (Python, Julia, etc.)
 
+## What you will learn in the short course
+
+-   Understand the basic structure of an R package
+-   Create your own R `r fontawesome::fa("cube")`
+-   Learn about & apply professional `r fontawesome::fa("cube")` development workflow
+-   Learn & apply fundamentals of quality control for R `r fontawesome::fa("cube")`
+-   Learn how to make an R `r fontawesome::fa("cube")` available to others
+
+
+<!-- Daniel -->
+
 ## Start small - from script to package
 
 1.  Encapsulate behavior (functions)
@@ -115,6 +126,8 @@ Plus you will learn some awesome things right here, today!
 6.  Refactor and optimize code
 7.  Version your code
 8.  Share as an R package
+
+<!-- Jack -->
 
 ## Structure of an R package
 
@@ -134,6 +147,8 @@ Plus you will learn some awesome things right here, today!
 -  Use RStudio to create a new package project
    -  File > New Project > New Directory > R Package
 -  Creates the required directory structure and files for you!
+
+<!-- Daniel -->
 
 ## Which steps should I make?
 
@@ -156,6 +171,8 @@ Plus you will learn some awesome things right here, today!
 - Test all of your functions, typically with the `testthat` package
 - Include user facing long form documentation (vignettes) to explain how to use the package   
 - Follow the [openstatsguide](https://www.openstatsware.org/guide.html) checklist
+
+<!-- Jack -->
 
 ## How to publish my R package?
 
@@ -194,7 +211,9 @@ What difference will the course make?
 :::
 :::
 
-## {background-image="resources/snb.png" background-size="cover"}
+<!-- Daniel -->
+
+## {background-image="resources/SnB2025_advertisement_slide.png" background-size="cover"}
 
 ## The conference 
 
@@ -211,9 +230,13 @@ What difference will the course make?
 ## How to register for the short course?
 
 -  Register for the conference and/or this short course [here](https://snb2025.sciencesconf.org/registration)
+![](resources/qr_code_snb2025.png)
 -  Short course fee is 150 EUR (early bird until 15 July 2025, later 200 EUR)
+
+## There is a second short course!
+
+- The second course is "Applied Modelling in Drug Development - Flexible regression modelling in Stan via brms" by Sebastian Weber and Lukas Widmer (Novartis) on 8 October 2025, also highly recommended!
 -  You get a discount if you book two short courses! (2 for 250 EUR)
-   - The second course is "Applied Modelling in Drug Development - Flexible regression modelling in Stan via brms" by Sebastian Weber and Lukas Widmer (Novartis) on 8 October 2025, also highly recommended!
 -  Limited number of places available, so register early!
 
 # Question, Comments?
