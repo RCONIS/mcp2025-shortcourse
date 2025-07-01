@@ -55,8 +55,8 @@ Plus you will learn some awesome things right here, today!
 
 ::: {.column width="70%"}
 -   Ph.D. in Statistics from University of Zurich, Bayesian Model Selection
--   Biostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for the last 4 years
--   Co-founder of [RCONIS](https://rconis.com) mid 2024 - it has already been 1 year now!
+-   Biostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for 4 years
+-   Co-founder of [RCONIS](https://rconis.com) (Research Consulting and Innovative Solutions) mid 2024 - it has already been 1 year now!
 -   Multiple R packages on CRAN and Bioconductor, co-wrote book on Likelihood and Bayesian Inference, chair of `openstatsware`
 -   Feel free to connect
    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
@@ -73,7 +73,7 @@ Plus you will learn some awesome things right here, today!
 ::: {.column width="70%"}
 -   BSc in Statistics from the University of Bath
 -   Data Scientist with Mango Solutions/Ascent, a Data consultancy, for 5 years
--   Joined Novartis as a Software Developer in April 2024, part of the Open-source enablment team.
+-   Joined Novartis as a Software Developer in April 2024, part of the Open-source enablement team.
 -   Day-to-day is helping study teams to use Open-source, through direct support or building tools!
     [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/jack-talboys-44b854169/)
 :::
