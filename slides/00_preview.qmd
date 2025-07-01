@@ -97,7 +97,7 @@ Plus you will learn some awesome things right here, today!
 
 ## Why care about GSWEP4R?
 
--   R is one of the most successfull statistical programming languages
+-   R is one of the most successful statistical programming languages
 -   R is a powerful yet complex *ecosystem*
     -   Core component: R packages
     -   Mature analysts: users & contributors
