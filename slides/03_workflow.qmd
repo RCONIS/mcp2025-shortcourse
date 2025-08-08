@@ -2,7 +2,6 @@
 title: "3 An R Package Engineering Workflow"
 description: "Workflow for creating R packages + practical"
 image: thumbnails/workflow.jpg
-author: Friedrich Pahlke
 ---
 
 # [{{< fa face-grin-stars >}}]{.yellow} Motivation
@@ -130,31 +129,31 @@ pexels.com]{.copyright}](thumbnails/workflow2.jpg){fig-align="center"}
 #| render: true
 #| fig.cap: "Cost distribution among software process activities"
 #| fig.subcap: "[doi:10.14569/IJACSA.2020.0110375](https://dx.doi.org/10.14569/IJACSA.2020.0110375)"
-library("ggplot2") 
+library("ggplot2")
 library("dplyr")
 classes <- c("Design (12%)", "Coding (6%)", "Testing (12%)", "Maintenance (70%)")
 effortData <- data.frame(
-  id = 1:4,
-  class = classes,
-  prop = c(12, 6, 12, 70)
+    id = 1:4,
+    class = classes,
+    prop = c(12, 6, 12, 70)
 )
 
 effortData$class <- factor(effortData$class, levels = classes)
 
 effortData <- effortData %>%
-  arrange(desc(class)) %>%
-  mutate(lab.ypos = cumsum(prop) - 0.5*prop) %>%
-  arrange(desc(id))
+    arrange(desc(class)) %>%
+    mutate(lab.ypos = cumsum(prop) - 0.5 * prop) %>%
+    arrange(desc(id))
 
 mycols <- c("#0073C2FF", "#EFC000FF", "#868686FF", "#CD534CFF")
 
 ggplot(effortData, aes(x = "", y = prop, fill = class)) +
-  geom_bar(width = 1, stat = "identity", color = "white") +
-  coord_polar("y", start = -32) +
-  geom_text(aes(y = lab.ypos, label = prop), color = "white")+
-  scale_fill_manual(values = mycols) + 
-  labs(fill = "Activity") +
-  theme_void()
+    geom_bar(width = 1, stat = "identity", color = "white") +
+    coord_polar("y", start = -32) +
+    geom_text(aes(y = lab.ypos, label = prop), color = "white") +
+    scale_fill_manual(values = mycols) +
+    labs(fill = "Activity") +
+    theme_void()
 ```
 
 ## Why practice good engineering?
@@ -167,31 +166,31 @@ ggplot(effortData, aes(x = "", y = prop, fill = class)) +
 #| render: true
 #| fig.cap: "Origin of errors in system development"
 #| fig.subcap: "[Boehm, B. (1981). Software Engineering Economics. Prentice Hall.](https://dl.acm.org/doi/10.5555/539425)"
-library("ggplot2") 
+library("ggplot2")
 library("dplyr")
 classes <- c("Analysis Errors (60%)", "Design and Implementation Errors (40%)")
 effortData <- data.frame(
-  id = 1:2,
-  class = classes,
-  prop = c(60, 40)
+    id = 1:2,
+    class = classes,
+    prop = c(60, 40)
 )
 
 effortData$class <- factor(effortData$class, levels = classes)
 
 effortData <- effortData %>%
-  arrange(desc(class)) %>%
-  mutate(lab.ypos = cumsum(prop) - 0.5*prop) %>%
-  arrange(desc(id))
+    arrange(desc(class)) %>%
+    mutate(lab.ypos = cumsum(prop) - 0.5 * prop) %>%
+    arrange(desc(id))
 
 mycols <- c("#CD534CFF", "#0073C2FF")
 
 ggplot(effortData, aes(x = "", y = prop, fill = class)) +
-  geom_bar(width = 1, stat = "identity", color = "white") +
-  coord_polar("y", start = -32) +
-  geom_text(aes(y = lab.ypos, label = prop), color = "white")+
-  scale_fill_manual(values = mycols) + 
-  labs(fill = "Activity") +
-  theme_void()
+    geom_bar(width = 1, stat = "identity", color = "white") +
+    coord_polar("y", start = -32) +
+    geom_text(aes(y = lab.ypos, label = prop), color = "white") +
+    scale_fill_manual(values = mycols) +
+    labs(fill = "Activity") +
+    theme_void()
 ```
 
 ## Why practice good engineering?

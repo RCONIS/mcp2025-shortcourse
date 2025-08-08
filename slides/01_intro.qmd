@@ -2,7 +2,6 @@
 title: "1 Introduction"
 description: "Introduction and outline of program"
 image: thumbnails/hello.jpg
-author: Daniel Sabanés Bové and Friedrich Pahlke
 ---
 
 ## Disclaimer
@@ -28,30 +27,14 @@ author: Daniel Sabanés Bové and Friedrich Pahlke
 :::
 :::
 
-## Friedrich
-
-::: columns
-::: {.column width="70%"}
--   Since 2008 self-employed consultant for computer science and data science as well as biostatistics
--   Co-founder and CEO of RPACT, a company developing the formally validated R package [rpact](https://cran.r-project.org/package=rpact "rpact: Confirmatory Adaptive Clinical Trial Design and Analysis") with 28 releases on CRAN since 2018
--   Co-founder of [RCONIS](https://rconis.com)
--   Trained software architect; R programmer since 2004; R Shiny developer since 2019
--   Feel free to connect at [`r fontawesome::fa("linkedin")` LinkedIn](http://www.linkedin.com/in/pahlke "Friedrich Pahlke at LinkedIn") or [`r fontawesome::fa("github")` Github](https://github.com/fpahlke "Friedrich Pahlke at GitHub")
-:::
-
-::: {.column width="30%"}
-![](resources/friedrich.jpg)
-:::
-:::
-
 ## `openstatsware`
 
 ::: columns
 ::: {.column width="70%"}
 - [openstatsware.org](https://openstatsware.org)
-- Since: 19 August 2022 - almost 2 years now!
+- Since: 19 August 2022 - almost exactly 3 years now!
 - Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)
-- Who: Currently more than 50 statisticians from more than 30 organizations
+- Who: Currently more than 60 statisticians from more than 30 organizations
 - What: Engineer packages and spread best practices
 :::
 
@@ -72,22 +55,20 @@ author: Daniel Sabanés Bové and Friedrich Pahlke
 
 | Time               | Topic                                        |
 |--------------------|:---------------------------------------------|
-| 14:00 - 14:30 CEST | Introduction and outline                     |
-| 14:30 - 15:15 CEST | R packages, what are they? + practical       |
-| 15:15 - 15:45 CEST | Workflow for creating R packages + practical |
-| 15:45 - 16:30 CEST | Package quality + exercise                   |
-| 16:30 - 17:15 CEST | Publication + practical                      |
-| 17:15 - 17:30 CEST | Conclusion                                   |
-
+| 1:00 - 1:30        | Introduction and outline                     |
+| 1:30 - 2:15        | R packages, what are they? + practical       |
+| 2:15 - 2:45        | Workflow for creating R packages + practical |
+| 2:45 - 3:30        | R Package quality + exercise                 |
+| 3:30 - 4:15        | Publication of R packages + practical        |
+| 4:15 - 4:30        | Conclusion                                   |
 
 ## House-keeping
 
--   Course website at [RCONIS.github.io/user2024-tutorial-gswep](https://RCONIS.github.io/user2024-tutorial-gswep)
-    -   all slides
-    -   sources available at [github.com/RCONIS/user2024-tutorial-gswep](https://github.com/RCONIS/user2024-tutorial-gswep)
-    -   all materials CC-BY-SA 4.0
--   We offer a [gitter chat channel](https://matrix.to/#/#workshop-r-swe_community:gitter.im)
-    -   use to ask your peers questions
+Course website at [RCONIS.github.io/mcp2025-shortcourse](https://RCONIS.github.io/mcp2025-shortcourse)
+
+  -   all slides
+  -   sources available at [github.com/RCONIS/mcp2025-shortcourse](https://github.com/RCONIS/mcp2025-shortcourse)
+  -   all materials CC-BY-SA 4.0
 
 ## What you will need
 
@@ -143,52 +124,52 @@ $\leadsto$ R package
 
 ```{r cran-pkg-network, echo=FALSE}
 if (!file.exists("resources/pkg_graph.png")) { # primitive caching
-  library(tidyverse)
-  local({
-    r <- getOption("repos")
-    r["CRAN"] <- "https://cloud.r-project.org"
-    options(repos = r)
-  })
-  # get pkg cumulative downloads from last month
-  db <- tools::CRAN_package_db()
-  tbl_dl_ <- db %>%
-      group_by(chunk = row_number() %/% 100) %>% # chunk to comply with API limit
-      nest() %>%
-      mutate(
-          res = purrr::map2(
-              data, chunk,
-              function(data, id) {
-                  cranlogs::cran_downloads(data$Package, when = "last-month") %>%
-                      group_by(package) %>%
-                      summarize(count = sum(count))
-              }
-          )
-      ) %>%
-      ungroup() %>%
-      select(res) %>%
-      unnest(res) %>%
-      distinct()
-  tbl_dl <- filter(tbl_dl_, count >= 10000L, !is.na(count))
-  tbl_deps <- tools::package_dependencies(
+    library(tidyverse)
+    local({
+        r <- getOption("repos")
+        r["CRAN"] <- "https://cloud.r-project.org"
+        options(repos = r)
+    })
+    # get pkg cumulative downloads from last month
+    db <- tools::CRAN_package_db()
+    tbl_dl_ <- db %>%
+        group_by(chunk = row_number() %/% 100) %>% # chunk to comply with API limit
+        nest() %>%
+        mutate(
+            res = purrr::map2(
+                data, chunk,
+                function(data, id) {
+                    cranlogs::cran_downloads(data$Package, when = "last-month") %>%
+                        group_by(package) %>%
+                        summarize(count = sum(count))
+                }
+            )
+        ) %>%
+        ungroup() %>%
+        select(res) %>%
+        unnest(res) %>%
+        distinct()
+    tbl_dl <- filter(tbl_dl_, count >= 10000L, !is.na(count))
+    tbl_deps <- tools::package_dependencies(
         tbl_dl$package,
         which = c("Imports", "Depends", "LinkingTo")
-      ) %>%
-      enframe(name = "from", value = "to") %>%
-      unnest(to)
-  grph_deps <- tidygraph::as_tbl_graph(tbl_deps) %>%
-    left_join(
-      tbl_dl_,
-      by = c(name = "package")
     ) %>%
-    filter(!is.na(count)) # remove base packages
-  plt <- ggraph::ggraph(grph_deps, layout = "linear", circular = TRUE) +
-      ggraph::geom_edge_link(alpha = .033) +
-      ggraph::geom_node_label(
-          aes(label = if_else(count > quantile(count, 0.975, na.rm = TRUE), name, NA_character_)),
-          repel = TRUE
-      ) +
-      ggraph::theme_graph()
-  ggsave("resources/pkg_graph.png", plot = plt, width = 8, height = 8/1.61, dpi = 300)
+        enframe(name = "from", value = "to") %>%
+        unnest(to)
+    grph_deps <- tidygraph::as_tbl_graph(tbl_deps) %>%
+        left_join(
+            tbl_dl_,
+            by = c(name = "package")
+        ) %>%
+        filter(!is.na(count)) # remove base packages
+    plt <- ggraph::ggraph(grph_deps, layout = "linear", circular = TRUE) +
+        ggraph::geom_edge_link(alpha = .033) +
+        ggraph::geom_node_label(
+            aes(label = if_else(count > quantile(count, 0.975, na.rm = TRUE), name, NA_character_)),
+            repel = TRUE
+        ) +
+        ggraph::theme_graph()
+    ggsave("resources/pkg_graph.png", plot = plt, width = 8, height = 8 / 1.61, dpi = 300)
 }
 knitr::include_graphics("resources/pkg_graph.png")
 ```

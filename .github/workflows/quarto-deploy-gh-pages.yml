@@ -1,4 +1,4 @@
-name: Publish Website
+name: Publish Site
 
 on:
   workflow_dispatch:
@@ -6,38 +6,40 @@ on:
     branches:
      - main
 
+env:
+  QUARTO_DIR: "."
+
 jobs:
   publish:
-    name: Build & Deploy
+    name: Build & Deploy Quarto Project
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/insightsengineering/rstudio:latest
     permissions:
       contents: write
-    strategy:
-      max-parallel: 1
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Create R Library Directory
-        run: mkdir -p ~/.R/library
-
-      - name: Install R Packages
-        run: |
-          R -e 'install.packages(c("knitr", "rmarkdown", "checkmate", "emoji", "testthat", "covr", "dplyr", "ggplot2"), lib="~/.R/library")'
+      - name: Run Staged dependencies
+        uses: insightsengineering/staged-dependencies-action@v2
         env:
-          R_LIBS_USER: ~/.R/library
-
-      - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          path: "."
+          enable-check: false
+          direction: upstream
 
       - name: Render Quarto Project
-        env:
-          R_LIBS_USER: ~/.R/library
         run: quarto render --output-dir _site
         shell: bash
+        working-directory: ${{ env.QUARTO_DIR }}
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish Project
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Publish Project to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: ./${{ env.QUARTO_DIR }}/_site
+          destination_dir: ${{ env.QUARTO_DIR }}

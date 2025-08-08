@@ -4,9 +4,9 @@ project:
 
 website:
   title: "GSWEP4R Tutorial"
-  description: "useR! Tutorial: Good Software Engineering Practice with R"
+  description: "MCP 2025 Short Course: Good Software Engineering Practice with R"
   favicon: favicon.ico
-  site-url: https://RCONIS.github.io/user2024-tutorial-gswep
+  site-url: https://RCONIS.github.io/mcp2025-shortcourse
   search: true
   navbar:
     left:

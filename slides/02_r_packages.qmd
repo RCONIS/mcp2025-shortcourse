@@ -2,7 +2,6 @@
 title: "2 R packages"
 description: "R package syntax + practical"
 image: thumbnails/packages.jpg
-author: Daniel Sabanés Bové
 ---
 
 # Introduction
@@ -161,14 +160,14 @@ NULL
 #'
 #' @return The sum of `x` and `y`.
 #' @export
-#' 
+#'
 #' @note This function is a bit boring but that is ok.
 #' @seealso [Arithmetic] for an easier way.
 #'
 #' @examples
 #' my_sum(1, 2)
 my_sum <- function(x, y) {
-  x + y
+    x + y
 }
 ```
 

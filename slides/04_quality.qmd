@@ -2,7 +2,6 @@
 title: "4 Ensuring Quality"
 description: "Package quality + exercise"
 image: thumbnails/quality.jpg
-author: Friedrich Pahlke
 ---
 
 # Apply Clean Code Rules

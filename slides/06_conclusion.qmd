@@ -2,7 +2,6 @@
 title: "6 Conclusion"
 description: "Discussion of learning experience, summary of workflow, conclusion and next steps."
 image: thumbnails/conclusion.jpg
-author: Daniel Sabanés Bové
 ---
 
 # Take away messages

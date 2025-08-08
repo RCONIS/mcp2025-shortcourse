@@ -1,9 +1,9 @@
 ---
 title: "Good Software Engineering Practice for R Packages"
-description: 'useR! 2024 Tutorial'
-author: Daniel Sabanés Bové and Friedrich Pahlke
+description: 'MCP 2025 Short Course'
+author: Daniel Sabanés Bové
 institute: '[![RCONIS](slides/resources/RCONIS_100.png)](https://www.rconis.com "RPACT Company Website")'
-creator: Daniel Sabanés Bové and Friedrich Pahlke
+creator: Daniel Sabanés Bové
 keywords: "rconis, gswep, r, gxp"
 email-obfuscation: javascript
 title-meta: 'rconis'
@@ -25,42 +25,41 @@ Creators (initial authors):
 
 The current version was edited by
 - Daniel Sabanes Bove, https://github.com/danielinteractive/ and www.linkedin.com/in/danielsabanesbove/
-- Friedrich Pahlke, https://github.com/fpahlke/ and www.linkedin.com/in/pahlke/
 
 License: This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
-The source files are hosted at https://github.com/RCONIS/user2024-tutorial-gswep, which is forked from and a subset of the original version at https://github.com/RCONIS/workshop-r-swe-zrh,.
+The source files are hosted at https://github.com/RCONIS/mcp2025-shortcourse, which is forked from and a subset of the original version at https://github.com/RCONIS/user2024-tutorial-gswep.
 
 Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.
 -->
 ```
 
-Welcome to the homepage of the tutorial *"Good Software Engineering Practice for R Packages"*, part of the [useR! Conference 2024](https://events.linuxfoundation.org/user/) in Salzburg, Austria. In this course you will learn hands-on skills and tools to engineer reliable R packages. The workshop will be conducted in about 3 hours and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
+Welcome to the homepage of the tutorial *"Good Software Engineering Practice for R Packages"*, part of the [MCP 2025 Conference](https://isbiostat.org) in Philadelphia, USA. In this course you will learn hands-on skills and tools to engineer reliable R packages. The workshop will be conducted in about 3 hours and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
 
 ## Event Details
 
-This live event will be held on Monday July 8, 2024 14:00 - 17:30 CEST as an in-person tutorial in the room [Tennegau](https://userconf2024.sched.com/venue/Tennegau?iframe=no).
+This live event will be held on Monday August 12 2025 1:00 pm - 4:30 pm EST as an in-person course at the Center City Campus, Temple University, Philadelphia.
 
 ## Description
 
-Join us for an engaging 3-hour face-to-face course designed to enhance your R programming skills with a focus on developing reliable R packages used in statistics or data science. This course is a blend of informative presentations and interactive team exercises, aimed at equipping participants with practical tools and techniques for engineering high-quality R packages. Throughout the session, you will collaborate to build a small R package that adheres to clean code rules and incorporates good software engineering practices.
-
-This course is tailored for individuals who are comfortable with writing functions in R and are looking to elevate their package development skills. Bring your laptop and be prepared to transform your approach to R package development through hands-on learning and collaboration. Whether you're looking to improve your workflow, meet regulatory standards, or simply enhance the quality of your statistical tools, this course offers valuable insights and skills to achieve your goals.
+This course aims to equip participants with the essential software engineering practices required to develop and maintain robust R packages. With the growing demand for reproducible research and the increasing complexity of statistical methods developed e.g. for MCP methodology, writing high-quality R packages has become a critical skill for statisticians to prototype, develop, and disseminate novel methods (incl. for MCP) and push their adoption in practice. The course will focus on the key principles of software engineering, such as workflows, modular design, version control, testing, documentation, and quality indicators. Focusing on these aspects ensures the reliability and sustainability of R packages. Examples will be given from R packages implementing MCP, such as rpact.
 
 ## Learning Outcomes
 
-Learn, understand, and practice good software engineering rules. Participants will delve into the significance of good engineering habits to avoid the pitfalls of maintenance overload, inefficient development, and regulatory non-compliance. By emphasizing best practices, the course will guide them towards faster releases on CRAN, saving valuable time on refactoring for PoC to release version transitions, and fostering an open environment for community contributions on GitHub. All course materials, including R scripts, will be shared with participants via GitHub, providing easy access to resources for continued learning and application beyond the course.
+Participants will learn how to structure their R packages following best practices and making use of tools that streamline the development process. A significant emphasis will be placed on writing and running unit tests, ensuring that packages are error-free and behave as expected across different environments and over time. 
+
+By the end of the course, participants will have a solid understanding of good software engineering principles tailored to R package development, enabling them to build packages that are not only functional but also reliable, reusable, and easy to maintain.
 
 ## Schedule 
 
 | Time               | Topic                                        |
 |--------------------|:---------------------------------------------|
-| 14:00 - 14:30 CEST | Introduction and outline                     |
-| 14:30 - 15:15 CEST | R packages, what are they? + practical       |
-| 15:15 - 15:45 CEST | Workflow for creating R packages + practical |
-| 15:45 - 16:30 CEST | R Package quality + exercise                 |
-| 16:30 - 17:15 CEST | Publication of R packages + practical        |
-| 17:15 - 17:30 CEST | Conclusion                                   |
+| 1:00 - 1:30        | Introduction and outline                     |
+| 1:30 - 2:15        | R packages, what are they? + practical       |
+| 2:15 - 2:45        | Workflow for creating R packages + practical |
+| 2:45 - 3:30        | R Package quality + exercise                 |
+| 3:30 - 4:15        | Publication of R packages + practical        |
+| 4:15 - 4:30        | Conclusion                                   |
 
 ## Prerequisites & Technical Setup
 
@@ -87,3 +86,6 @@ For the course, participants are required to use their own laptop to be able to 
 -   [26th September 2023, Rockville, MD, US](https://openpharma.github.io/workshop-r-swe-md/)
 -   [16th and 17th October 2023, Montreal, QC, CA](https://openpharma.github.io/workshop-r-swe-mtl/)
 -   [18th and 19th April 2024, Zurich, CH](https://rconis.github.io/workshop-r-swe-zrh/)
+-   [1st August 2024, Beijing, CN](https://kkmann.github.io/workshop-r-swe/)
+-   [28th October 2024, APAC, online](https://openpharma.github.io/workshop-r-swe-rinpharma-2024/)
+-   [8th April 2025, Tokyo, Japan](https://www.linkedin.com/posts/yuichi-nakajima-8984759a_r-package-development-workshop-by-daniel-activity-7305102975851511810-QPl_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAeLiYUB2lCTxf2k2-ROB6XktxT7lyQYIaQ)
