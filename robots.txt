@@ -1,0 +1,1 @@
+Sitemap: https://RCONIS.github.io/mcp2025-shortcourse/sitemap.xml
