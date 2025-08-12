@@ -2,7 +2,7 @@
 
 **MCP 2025 Philadelphia, USA**
 
-Monday August 12, 2025 1:00 pm - 4:30 pm EST
+Tuesday August 12, 2025 1:30 pm - 5:10 pm EST
 
 This course aims to equip participants with the essential software engineering practices required to develop and maintain robust R packages. With the growing demand for reproducible research and the increasing complexity of statistical methods developed e.g. for MCP methodology, writing high-quality R packages has become a critical skill for statisticians to prototype, develop, and disseminate novel methods (incl. for MCP) and push their adoption in practice. The course will focus on the key principles of software engineering, such as workflows, modular design, version control, testing, documentation, and quality indicators. Focusing on these aspects ensures the reliability and sustainability of R packages. Examples will be given from R packages implementing MCP, such as rpact.
 

@@ -38,7 +38,7 @@ Welcome to the homepage of the tutorial *"Good Software Engineering Practice for
 
 ## Event Details
 
-This live event will be held on Monday August 12 2025 1:00 pm - 4:30 pm EST as an in-person course at the Center City Campus, Temple University, Philadelphia.
+This live event will be held on Tuesday August 12 2025 1:30 pm - 5:10 pm EST as an in-person course at the Center City Campus, Temple University, Philadelphia.
 
 ## Description
 
@@ -54,12 +54,12 @@ By the end of the course, participants will have a solid understanding of good s
 
 | Time               | Topic                                        |
 |--------------------|:---------------------------------------------|
-| 1:00 - 1:30        | Introduction and outline                     |
-| 1:30 - 2:15        | R packages, what are they? + practical       |
-| 2:15 - 2:45        | Workflow for creating R packages + practical |
-| 2:45 - 3:30        | R Package quality + exercise                 |
-| 3:30 - 4:15        | Publication of R packages + practical        |
-| 4:15 - 4:30        | Conclusion                                   |
+| 1:30 - 2:00        | Introduction and outline                     |
+| 2:00 - 2:45        | R packages, what are they? + practical       |
+| 2:45 - 3:30        | Workflow for creating R packages + practical |
+| 3:30 - 4:15        | R Package quality + exercise                 |
+| 4:15 - 5:00        | Publication of R packages + practical        |
+| 5:00 - 5:10        | Conclusion                                   |
 
 ## Prerequisites & Technical Setup
 
